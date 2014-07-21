@@ -1,4 +1,6 @@
 Streemfeed::Application.routes.draw do
+  resources :events
+
   resources :clubs
 
   resources :profiles
