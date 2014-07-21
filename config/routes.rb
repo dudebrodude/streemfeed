@@ -1,5 +1,9 @@
 Streemfeed::Application.routes.draw do
-  resources :posts
+
+
+  resources :posts do
+    resources :comments, except: [:index], controller: 'posts/comments'
+  end
 
   resources :events
 

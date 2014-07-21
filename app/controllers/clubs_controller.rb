@@ -5,12 +5,13 @@ class ClubsController < ApplicationController
   # GET /clubs.json
   def index
     @clubs = Club.all
+
+     
   end
 
   # GET /clubs/1
   # GET /clubs/1.json
   def show
-    @posts = Post.all
   end
 
   # GET /clubs/new
