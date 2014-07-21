@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
 
    validates :fname, length: { minimum: 2 }
    validates :lname, length: { minimum: 2 }
+
+            def to_s
+         	"#{fname} #{lname}"
+end
 end
