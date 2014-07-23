@@ -1,10 +1,6 @@
 	<div class="col-sm-3">
 	<% if user_signed_in? %>
 <h4 class="headline">Welcome, <%= current_user.fname %>!</h4>
-<% else %>
-<h4 class="headline">Welcome</h4>
-<% end %>
-<% if user_signed_in? %>
 <table>
   <tbody>
         <tr>
@@ -13,10 +9,9 @@
 
   </tbody>
 </table>
-
-
 <% else %>
-<h4>Please sign in to access your account</h4>
+<h4 class="headline">Welcome</h4>
+
 <%= render 'devise/sessions/new' %>
 
 <% end %>
