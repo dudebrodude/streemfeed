@@ -17,6 +17,8 @@
 
 <% else %>
 <h4>Please sign in to access your account</h4>
+<%= render 'devise/sessions/new' %>
+
 <% end %>
 </div>
 <div class="col-sm-6">
@@ -28,6 +30,8 @@
 <% end %>
 </div>
 <div class="col-sm-3">
+						<% if user_signed_in? %>
 <h4 class="headline">What's Popular</h4>
+<% end %>
 </div>
 
