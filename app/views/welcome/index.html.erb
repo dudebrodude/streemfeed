@@ -1,2 +1,33 @@
-<h1>Welcome to Streemfeed</h1>
+	<div class="col-sm-3">
+	<% if user_signed_in? %>
+<h4 class="headline">Welcome, <%= current_user.fname %>!</h4>
+<% else %>
+<h4 class="headline">Welcome</h4>
+<% end %>
+<% if user_signed_in? %>
+<table>
+  <tbody>
+        <tr>
+        <td><h5><%= link_to 'Edit your account', edit_user_registration_path %></h5></td>
+        </tr>
+
+  </tbody>
+</table>
+
+
+<% else %>
+<h4>Please sign in to access your account</h4>
+<% end %>
+</div>
+<div class="col-sm-6">
+	<% if user_signed_in? %>
+<h4 class="headline">Featured Clubs</h4>
+<%= render 'clubs/featclubs' %>
+<% else %>
+...
+<% end %>
+</div>
+<div class="col-sm-3">
+<h4 class="headline">What's Popular</h4>
+</div>
 

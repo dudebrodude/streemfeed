@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Streemfeed</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>Streemfeed</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-	
-	<%= user_logged_in_msg %>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<%= link_to "Streemfeed", root_path, id: "logo" %>
+			</div>
 
-<%= yield %>
-
-
-
-</body>
-</html>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="navbar-collapse collapse navbar-responsive-collapse">
+				<ul class="nav navbar-nav">
+					<% if user_signed_in? %>
+					<li class="active"><%= link_to "Home", root_path %></li>
+					<% else %>
+					<li class="active"><%= link_to "Home", root_path %></li>
+					<% end %>
+					<li><%= link_to "Clubs", clubs_path %></li>
+					<li><%= link_to "Events", events_path %></li>
+				</ul>
+				<p class="navbar-text pull-right">
+					<% if user_signed_in? %>
+					<strong><%= current_user.fname %></strong> |
+					<%= link_to "Profile", root_path, :class => 'navbar-link' %> |
+					<%= link_to "Account Settings", edit_user_registration_path, :class => 'navbar-link' %> |
+					<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+					<% else %>
+					<%= link_to "Login", new_user_session_path, :class => 'navbar-link' %> |
+					<%= link_to "Register", new_user_registration_path, :class => 'navbar-link' %>
+					<% end %>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+			<div class="container">
+				
+					<%= yield %>
+				
+			</div>
+		</body>
+		</html>
