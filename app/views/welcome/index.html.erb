@@ -1,27 +1,33 @@
 	<div class="col-sm-3">
+		<div class="holder">
 	<% if user_signed_in? %>
 <h4 class="headline">Welcome, <%= current_user.fname %>!</h4>
 <table>
   <tbody>
         <tr>
-        <td><h5><%= link_to 'Edit your account', edit_user_registration_path %></h5></td>
+        <td><h5> <%= fa_icon 'envelope' %> <%= link_to 'Messages', edit_user_registration_path %></h5></td>
         </tr>
+        <tr>
+                <td><h5> <%= fa_icon 'edit' %> <%= link_to 'Edit your account', edit_user_registration_path %></h5></td>
+            </tr>
+        
 
   </tbody>
 </table>
 <% else %>
-<h4 class="headline">Welcome</h4>
+<h4 class="headline">Sign in</h4>
 
 <%= render 'devise/sessions/new' %>
 
 <% end %>
+</div>
 </div>
 <div class="col-sm-6">
 	<% if user_signed_in? %>
 <h4 class="headline">Featured Clubs</h4>
 <%= render 'clubs/featclubs' %>
 <% else %>
-...
+<h4 class="headline">.</h4>
 <% end %>
 </div>
 <div class="col-sm-3">
