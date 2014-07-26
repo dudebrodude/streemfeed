@@ -1,4 +1,4 @@
-<div class="col-sm-3">
+<div class="col-sm-4">
 	<div class="holder">
    <% if user_signed_in? %>
    <h4 class="headline"><%= fa_icon 'home' %> <%= current_user.fname %></h4>
@@ -21,45 +21,70 @@
     </tbody>
   </table>
   <% else %>
-  <h4 class="headline"><%= fa_icon 'edit' %> Sign in</h4>
+  <h3 class="headline"><%= fa_icon 'edit' %> Sign in</h3>
   <%= render 'devise/sessions/new' %>
 </div>
-<div class="holder">
-  <h4 class="headline"><%= fa_icon 'book' %> Haven't signed up?</h4>
-     <%= image_tag("slide.png", :class => "img-responsive") %>
-  <h3 class="center"> <%= link_to 'Register now!', new_user_registration_path %></h3>
-  
 
+<div class="holder">
+  <h3 class="headline center">Haven't signed up?</h3>
+
+  <h1 class="register-now"> <%= link_to 'Register now!', new_user_registration_path, class: "btn btn-lg btn-primary" %></h1>
 </div>
 </div>
 <% end %>
 <% if user_signed_in? %>
 <div class="col-sm-6">
   <div class="holder">
-   
-   <h4 class="headline"><%= fa_icon 'building-o' %> Featured Clubs</h4>
-
+    <h4 class="headline"><%= fa_icon 'building-o' %> Featured Clubs</h4>
+  </div>
 </div>
+<% else %>
+<div class="col-sm-8">
+  <div class="holder">
+    <h3 class="headline"><%= fa_icon 'child' %> New to Streemfeed? How it works:</h3>
+ <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+
+    <div class="item active">
+  <%= image_tag("slide4.png", :class => "img-responsive") %>
+      <div class="carousel-caption">
+            <h3>1. Sign up and start earning points</h3>
+    <p>Points can be earned in various ways throughout the site</p>
+      </div>
+    </div>
+    <div class="item">
+  <%= image_tag("slide2.png", :class => "img-responsive") %>
+      <div class="carousel-caption">
+            <h3>2. Check in at your favorite clubs to redeem your points </h3>
+    <p>Free drinks, front of line passes, and much more!</p>
+      </div>
+    </div>
+        <div class="item">
+  <%= image_tag("slide1.png", :class => "img-responsive") %>
+      <div class="carousel-caption">
+            <h3>3. Have fun!</h3>
+    <p>You'll be acting like a whore in no time!</p>
+      </div>
+    </div>
+  </div>
 </div>
-   <% else %>
-   <div class="col-sm-9">
-    <div class="holder">
-        <h4 class="headline"><%= fa_icon 'child' %> New to Streemfeed?</h4>
-Some kind of slideshow here
-
-    </div>
-    </div>
-   <% end %>
-
-
-
+  </div>
+</div>
+<% end %>
 <% if user_signed_in? %>
 <div class="col-sm-3">
   <div class="holder">
-Test 
+    Test 
   </div>
-  
-  </div>
-  <% end %>
+</div>
+<% end %>
 
 
