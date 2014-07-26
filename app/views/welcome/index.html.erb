@@ -24,12 +24,12 @@
   <h3 class="headline"><%= fa_icon 'edit' %> Sign in</h3>
   <%= render 'devise/sessions/new' %>
 </div>
-
 <div class="holder">
-  <h3 class="headline center">Haven't signed up?</h3>
-
-  <h1 class="register-now"> <%= link_to 'Register now!', new_user_registration_path, class: "btn btn-lg btn-primary" %></h1>
+  <h3 class="havent-signed">Haven't signed up?</h3>
+  <center><%= link_to 'Register now',new_user_registration_path, class: "btn btn-lg btn-info" %></center>
 </div>
+
+
 </div>
 <% end %>
 <% if user_signed_in? %>
@@ -41,7 +41,6 @@
 <% else %>
 <div class="col-sm-8">
   <div class="holder">
-    <h3 class="headline"><%= fa_icon 'child' %> New to Streemfeed? How it works:</h3>
  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -54,26 +53,27 @@
   <div class="carousel-inner">
 
     <div class="item active">
-  <%= image_tag("slide4.png", :class => "img-responsive") %>
+  <%= image_tag("slide1t.png", :class => "img-responsive") %>
       <div class="carousel-caption">
             <h3>1. Sign up and start earning points</h3>
     <p>Points can be earned in various ways throughout the site</p>
       </div>
     </div>
     <div class="item">
-  <%= image_tag("slide2.png", :class => "img-responsive") %>
+  <%= image_tag("slide2t.png", :class => "img-responsive") %>
       <div class="carousel-caption">
             <h3>2. Check in at your favorite clubs to redeem your points </h3>
     <p>Free drinks, front of line passes, and much more!</p>
       </div>
     </div>
         <div class="item">
-  <%= image_tag("slide1.png", :class => "img-responsive") %>
+  <%= image_tag("slide3t.png", :class => "img-responsive") %>
       <div class="carousel-caption">
             <h3>3. Have fun!</h3>
     <p>You'll be acting like a whore in no time!</p>
       </div>
     </div>
+
   </div>
 </div>
   </div>
