@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-	<div class="holder mt50">
+	<div class="holder mt35">
 		<h1 class="signin"><%= fa_icon 'edit' %> Sign in</h1>
 		<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name), label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
 		<div><%= f.email_field :email, autofocus: true, hide_label: :true, placeholder: "Email" %></div>
