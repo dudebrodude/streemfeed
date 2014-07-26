@@ -3,7 +3,6 @@
 	<div class="holder center mt100 p15">
 		<h3 class="signin left mt0">Sign up</h3> 
 		<h5 class="left mb15">Enter your information below to get started</h5> 
-		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 		<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name),  label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
 		<%= devise_error_messages! %>
 
@@ -20,7 +19,8 @@
 		<div class="right mb10"><%= check_box_tag(:terms_service) %> <%= label_tag(:terms_service, "I agree to the terms of service") %></div>
 
 
-		<div class="right"><%= f.submit "Create my account", class: "btn btn-primary" %></div>
+		<div class="right"><%= f.submit "Create account", class: "btn btn-primary" %> <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button></div>
+
 		<% end %>
 	</div>
 </div>
