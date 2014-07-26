@@ -18,23 +18,14 @@ width:100%;
 td{
 color:#999;
 }
-h5{
-	text-decoration:none;
-}
-
-tr{
-	background:#222;
-	border-bottom:1px solid #333;
-	text-decoration:none;
-}
 
 tr:hover {
 background-color: #333;
+padding:5px;
 text-decoration:none;
 }
 
 .headline{
-background:#222;
 border-radius:3px;
 color:#fff;
 margin-top:0;
@@ -43,15 +34,24 @@ padding:5px;
 }
 
 .menu-option{
+	background:#333;
 	text-decoration:none;
+	border-radius:5px;
+
+
 }
 
 .holder {
-    border: 1px solid #2c2c2c;
-    border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-    margin-top: 25px;
+
+     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-top: 5px;
     padding: 10px;
+}
+
+.home-holder{
+	background:#222;
+	border-radius:3px;
+	margin-top:25px;
 }
 
 .well {
@@ -153,9 +153,10 @@ margin-top: -11px;
 color: #fff;
 float: left;
 font: 1.9em 'Arial';
+text-decoration: none;
 letter-spacing: -1px;
 margin-right: 10px;
-padding: 5px;
+padding: 10px;
 }
 #home-image{
 float: right;
@@ -195,6 +196,7 @@ text-align:center;
 background-color:  #1e1e1e;
 border-color: #222;
 color:#fff;
+text-decoration: none;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 background-color: #222;
