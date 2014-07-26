@@ -1,4 +1,5 @@
 @import "../../../vendor/assets/stylesheets/bootstrap/bootstrap.scss";
+@import "spacing";
 @import "rails_bootstrap_forms";
 @import "font-awesome";
 
@@ -27,7 +28,7 @@ text-decoration:none;
 
 .headline{
 border-radius:3px;
-color:#fff;
+color:#c4c4c4;
 margin-top:0;
 padding-bottom:10px;
 padding:5px;
@@ -42,16 +43,20 @@ padding:5px;
 }
 
 .holder {
-
-     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-    margin-top: 5px;
-    padding: 10px;
+    background: none repeat scroll 0 0 #252525;
+    border:solid 2px #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin:5px 5px 15px -10px;
+    padding: 15px;
 }
 
 .home-holder{
 	background:#222;
-	border-radius:3px;
+	border-radius:5px;
 	margin-top:25px;
+	border:solid 3px #1e1e1e;
+	
 }
 
 .well {
@@ -150,7 +155,7 @@ margin-left: 0;
 margin-top: -11px;
 }
 #logo{
-color: #fff;
+color: #c4c4c4;
 float: left;
 font: 1.9em 'Arial';
 text-decoration: none;
@@ -194,7 +199,7 @@ text-align:center;
 }
 .navbar-inverse {
 background-color:  #1e1e1e;
-border-color: #222;
+border-bottom:solid 5px #252525;
 color:#fff;
 text-decoration: none;
 }

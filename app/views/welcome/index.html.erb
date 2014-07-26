@@ -25,11 +25,14 @@
   <%= render 'devise/sessions/new' %>
 </div>
 <div class="holder">
-  <h4 class="headline"><%= fa_icon 'book' %> Haven't signed up yet?</h4>
-  <%= link_to 'Register now!', new_user_registration_path, class: "btn btn-primary" %>
-  <% end %>
+  <h4 class="headline"><%= fa_icon 'book' %> Haven't signed up?</h4>
+     <%= image_tag("slide.png", :class => "img-responsive") %>
+  <h3 class="center"> <%= link_to 'Register now!', new_user_registration_path %></h3>
+  
+
 </div>
 </div>
+<% end %>
 <% if user_signed_in? %>
 <div class="col-sm-6">
   <div class="holder">
@@ -41,8 +44,9 @@
    <% else %>
    <div class="col-sm-9">
     <div class="holder">
-   <h4 class="headline">New to Streemfeed?</h4>
-   <%= image_tag("slide.png", :class => "img-responsive") %>
+        <h4 class="headline"><%= fa_icon 'child' %> New to Streemfeed?</h4>
+Some kind of slideshow here
+
     </div>
     </div>
    <% end %>
