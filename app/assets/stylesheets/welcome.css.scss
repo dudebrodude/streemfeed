@@ -16,18 +16,19 @@
     text-align: center;
     text-decoration: none;
 }
-.new-to {
-   
-	color: #c4c4c4;
-    margin: 5px -5px 28px 0;
-    text-decoration: none;
+
+.no-account {
+    color: #c4c4c4;
+    font-size: 1.1em;
+    margin-top: 0px;
+    padding-bottom: 3px;
 }
+
 .carousel-caption {
-	background: rgba(0,0,0,0.5);
-	bottom: 60px;
-	border-radius:5px;
-	margin-top:-10px;
-	  padding:0px;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    bottom: 60px;
+    padding: 0 0 10px;
 }
 .carousel-holder {
 
@@ -38,15 +39,12 @@
 .signin{
 	background: none repeat scroll 0 0 #222;
     border-radius: 5px 5px 0 0;
-    font-size:1.45em;
+    font-size:1.4em;
     color: #c4c4c4;
     margin: -4px -4px 13px;
-    padding: 15px;
+    padding: 10px;
 }
-.useroptions {
-    background: none repeat scroll 0 0 #2b2b2b;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-    margin: 0 5px 1px -10px;
-    padding: 15px;
+.forgotpass {
+	margin-top:10px;
 }
+

@@ -50,10 +50,10 @@ text-decoration:none;
 
 .holder {
     background: none repeat scroll 0 0 #2b2b2b;
+    border:solid 1px #222;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-    margin: 35px 5px 0 -10px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .home-holder{
@@ -61,6 +61,12 @@ text-decoration:none;
 	margin-top:35px;
 
 	
+}
+.reg-holder{
+	    background: none repeat scroll 0 0 #2b2b2b;
+    border-radius: 4px;
+	padding:20px;
+	margin-top:50px;
 }
 
 .well {
