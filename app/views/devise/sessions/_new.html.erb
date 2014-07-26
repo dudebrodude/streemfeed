@@ -1,5 +1,9 @@
+<div class="col-sm-12">
+	<div class="holder">
+	
+	  <h1 class="signin"><%= fa_icon 'edit' %> Sign in</h1>
 <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name), label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
-  <div><%= f.email_field :email, autofocus: true, hide_label: :true, placeholder: "Email"  %></div>
+  <div><%= f.email_field :email, autofocus: true, hide_label: :true, placeholder: "Email" %></div>
 
   <div><%= f.password_field :password, autocomplete: "off", hide_label: :true, placeholder: "Password"  %></div>
 
@@ -10,7 +14,14 @@
   <div><%= f.submit "Sign in", class: "btn btn-info" %></div>
 
 <% end %>
-  <h4 class="forgot-pass"><%= fa_icon 'lock' %> Forgot password?</h4>
+
+</div>
+<div class="useroptions">
+<%= link_to 'Register now', new_user_registration_path %> |
+<%= link_to 'Forgot password', new_user_registration_path %>
+</div>
+</div>
+
 
 
 

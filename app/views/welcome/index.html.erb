@@ -1,5 +1,5 @@
 <div class="col-sm-4">
-	<div class="holder">
+
    <% if user_signed_in? %>
    <h4 class="headline"><%= fa_icon 'home' %> <%= current_user.fname %></h4>
    <table>
@@ -21,17 +21,15 @@
     </tbody>
   </table>
   <% else %>
-  <h3 class="headline"><%= fa_icon 'edit' %> Sign in</h3>
+
   <%= render 'devise/sessions/new' %>
-</div>
-<div class="holder">
-  <h3 class="havent-signed">Haven't signed up?</h3>
-  <center><%= link_to 'Register now',new_user_registration_path, class: "btn btn-lg btn-info" %></center>
-</div>
 
-
-</div>
 <% end %>
+
+
+
+</div>
+
 <% if user_signed_in? %>
 <div class="col-sm-6">
   <div class="holder">
@@ -55,21 +53,21 @@
     <div class="item active">
   <%= image_tag("slide1t.png", :class => "img-responsive") %>
       <div class="carousel-caption">
-            <h3>1. Sign up and start earning points</h3>
+            <h3>Sign up and start earning points</h3>
     <p>Points can be earned in various ways throughout the site</p>
       </div>
     </div>
     <div class="item">
   <%= image_tag("slide2t.png", :class => "img-responsive") %>
       <div class="carousel-caption">
-            <h3>2. Check in at your favorite clubs to redeem your points </h3>
+            <h3>Check in at your favorite clubs to redeem your points </h3>
     <p>Free drinks, front of line passes, and much more!</p>
       </div>
     </div>
         <div class="item">
   <%= image_tag("slide3t.png", :class => "img-responsive") %>
       <div class="carousel-caption">
-            <h3>3. Have fun!</h3>
+            <h3>Have fun!</h3>
     <p>You'll be acting like a whore in no time!</p>
       </div>
     </div>
