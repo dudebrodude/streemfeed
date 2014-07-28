@@ -8,6 +8,7 @@
                   <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title"><%= @club.name %> <span style="float:right;">  <%= render 'checkin' %> </span> </h3> 
+          <div class="clubaddress">
           <table>
           <tbody>
             <tr>
@@ -19,6 +20,9 @@
 
           </tbody>
         </table>
+        </div>
+        </div>
+        <div class="panel-body">
          <%= render 'gmap' %>
    </div>
    </div>
