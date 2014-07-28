@@ -1,0 +1,28 @@
+   <div class="col-sm-3">
+   <div class="holder bg2b b1p222">
+   <h4 class="holder-head"><%= @club.name %></h4>
+   <table>
+    <tbody>
+      <tr>
+        <td><%= fa_icon 'phone' %> <%= number_to_phone(@club.phone, area_code: true) %></td>
+      </tr>
+            <tr>
+        <td><%= fa_icon 'home' %> <%= @club.address %></td>
+      </tr>
+        
+          <td><h5> <%= fa_icon 'envelope' %> <%= link_to 'Messages', edit_user_registration_path, :class => 'navbar-link' %></h5></td>
+       
+      </tr>
+      <tr>
+        <td><h5> <%= fa_icon 'photo' %> <%= link_to 'Photos', edit_user_registration_path %></h5></td>
+      </tr>
+      <tr>
+        <td><h5> <%= fa_icon 'child' %> <%= link_to 'Friends', edit_user_registration_path %></h5></td>
+      </tr>
+      <tr>
+        <td><h5> <%= fa_icon 'edit' %> <%= link_to 'Edit your account', edit_user_registration_path %></h5></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>

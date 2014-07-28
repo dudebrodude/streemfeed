@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    @club = Club.find(params[:id])
   end
 
   # GET /posts/1/edit
@@ -27,7 +28,13 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+
+  
    @post.user = current_user
+     @post.club = @club
+
+  
+
   
 
     respond_to do |format|

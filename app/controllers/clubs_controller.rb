@@ -12,7 +12,8 @@ class ClubsController < ApplicationController
   # GET /clubs/1
   # GET /clubs/1.json
   def show
-  end
+ @post = Post.new
+end
 
   # GET /clubs/new
   def new
@@ -27,6 +28,7 @@ class ClubsController < ApplicationController
   # POST /clubs.json
   def create
     @club = Club.new(club_params)
+    
 
     respond_to do |format|
       if @club.save

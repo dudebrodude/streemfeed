@@ -1,25 +1,20 @@
-<h1>Recent posts</h1>
+   <div class="col-sm-6">
+   <div class="holder bg2b b1p222">
+     <h3 class="holder-head"></h3>
+     <%= render 'posts/new' %>
 
 <table>
-
-
   <tbody>
     <% @club.posts.each do |post| %>
-
-      <tr>
-        <td><strong><%= post.user %>:</strong></td>
-        <td><%= post.title %></td>
+      <tr class="bg25">
+        <td> <h5 class="ml5"> <strong><%= post.user %></strong> <span style="float:right; margin-right:10px;"><%="#{time_ago_in_words(post.created_at)} ago "%></span></h5></td>
       </tr>
-   
+      <tr class="bg2b">
+       <td><%= post.title %></td>
+      </tr>
+       <% end %>
 
-        
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    
-    <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+</div>
+</div>
