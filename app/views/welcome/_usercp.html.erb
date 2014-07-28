@@ -2,10 +2,10 @@
 
     <ul class="nav nav-pills nav-stacked">
     <li class="<%= 'active' if params[:controller] == 'welcome' %>"> <a href="/"><h2>  <%= fa_icon 'home' %><span style="font-size:0.5em;"> Home </span></h2></a> </li>
-        <li class="<%= 'active' if params[:controller] == 'checkins' %>"> <a href="/checkins"><h2>  <%= fa_icon 'envelope' %><span style="font-size:0.5em;"> Messages </span></h2></a> </li>
+        <li class="<%= 'active' if params[:controller] == 'inbox' %>"> <a href="/inbox"><h2>  <%= fa_icon 'envelope' %><span style="font-size:0.5em;"> Messages </span></h2></a> </li>
            <li class="<%= 'active' if params[:controller] == 'photos' %>"> <a href="/photos"><h2>  <%= fa_icon 'photo' %><span style="font-size:0.5em;"> Photos </span></h2></a> </li>
-    <li class="<%= 'active' if params[:controller] == 'friends' %>"> <a href="/users"><h2>  <%= fa_icon 'child' %><span style="font-size:0.5em;"> Friends </span></h2></a> </li>
-     <li class="<%= 'active' if params[:controller] == 'events' %>"> <a href="/points"><h2>  <%= fa_icon 'bar-chart-o' %><span style="font-size:0.5em;"> Points </span></h2></a> </li>
+    <li class="<%= 'active' if params[:controller] == 'users' %>"> <a href="/users"><h2>  <%= fa_icon 'child' %><span style="font-size:0.5em;"> Friends </span></h2></a> </li>
+     <li class="<%= 'active' if params[:controller] == 'points' %>"> <a href="/points"><h2>  <%= fa_icon 'bar-chart-o' %><span style="font-size:0.5em;"> Points </span></h2></a> </li>
     <li class="<%= 'active' if params[:controller] == 'clubs' %>"> <a href="/clubs"><h2>  <%= fa_icon 'building-o' %><span style="font-size:0.5em;"> Clubs </span></h2></a> </li>
     <li class="<%= 'active' if params[:controller] == 'events' %>"> <a href="/events"><h2>  <%= fa_icon 'calendar-o' %><span style="font-size:0.5em;"> Event Calendar </span></h2></a> </li>
 

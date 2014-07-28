@@ -1,6 +1,13 @@
 Streemfeed::Application.routes.draw do
 
 
+  resources :points
+
+  resources :photos
+
+  get "inbox/index"
+  get "inbox/show"
+  get 'inbox' => 'inbox#index'
   resources :checkins
 
   resources :posts do
@@ -16,6 +23,7 @@ Streemfeed::Application.routes.draw do
   
 
   devise_for :users
+   get 'users' => 'users#index'
 
 
   get "welcome/index"
