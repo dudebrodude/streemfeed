@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'bootstrap_form'
 gem 'font-awesome-rails'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -13,6 +13,10 @@ class ClubsController < ApplicationController
   # GET /clubs/1.json
   def show
  @post = Post.new
+     @hash = Gmaps4rails.build_markers(@club) do |club, marker|
+    marker.lat club.latitude
+    marker.lng club.longitude
+  end
 end
 
   # GET /clubs/new
