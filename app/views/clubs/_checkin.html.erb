@@ -1,27 +1,39 @@
-         <button class="btn btn-primary mb10" data-toggle="modal" data-target="#myModal">
-  <%= fa_icon 'check' %> Check in
-</button>
-<!-- Modal -->
+  <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    <%= fa_icon 'check' %> Check in
+  </button>
+  <!-- Modal -->
+ 
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="row">
+       <div class="col-sm-12">
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title"><%= fa_icon 'check' %> Check in</h4>
-      </div>
-      <div class="modal-body">
-     
+ 
+        
+        
+          <div class="row">
+            <div class="col-sm-offset-10 col-sm-2">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          </div>
+          </div>
+          <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
           <div class="well">
-        <p><strong> <%= current_user %></strong></p>
-      <p>I just checked in at <%= @club.name %></p>
-      <p><%= Time.now %>
+                    <div class="col-sm-offset-8 col-sm-4">
+          <button type="button" class="btn btn-primary float-right"><%= fa_icon 'check-circle-o' %> Check in</button>
+          <button type="button" class="btn btn-danger float-right" data-dismiss="modal"><%= fa_icon 'times' %> Cancel</button>
+           </div>
+            <p><strong> <%= current_user %></strong></p>
+            <p>I just checked in at <%= @club.name %></p>
+          </div>
+          </div>
+          </div>
+         
         </div>
+
+
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Check in</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+    </div>
+    </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
