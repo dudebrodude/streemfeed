@@ -33,6 +33,7 @@ gem 'font-awesome-rails'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'fullcalendar-rails'
+gem 'merit'
 
 
 group :doc do

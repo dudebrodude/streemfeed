@@ -15,7 +15,7 @@ class CheckinsController < ApplicationController
   # GET /checkins/new
   def new
     @checkin = Checkin.new
-    @user = current_user
+   
   end
 
   # GET /checkins/1/edit
