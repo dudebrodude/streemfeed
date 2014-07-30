@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-   validates :fname, length: { minimum: 2 }
-   validates :lname, length: { minimum: 2 }
+   validates :name, length: { minimum: 4 }
+   
 
             def to_s
          	"#{fname} #{lname}"

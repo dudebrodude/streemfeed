@@ -13,7 +13,7 @@ end
       protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:fname, :lname, :email, :password, :password_confirmation) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation) }
     end
 def user_params
   params.require(:user).permit(:avatar)

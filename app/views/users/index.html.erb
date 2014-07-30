@@ -18,12 +18,16 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user %></td>
+        <td><%= gravatar_for user %><td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+
   
       </tr>
     <% end %>
   </tbody>
 </table>
+
   </div>
 </div>
 
