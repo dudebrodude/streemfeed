@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comment.post = @post
   end
 
   # GET /posts/new
@@ -31,12 +31,7 @@ class PostsController < ApplicationController
 
   
    @post.user = current_user
-     @post.club = @club
-
-  
-
-  
-
+    
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

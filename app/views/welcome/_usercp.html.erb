@@ -1,5 +1,6 @@
    
    <div class="col-sm-2 sidebar">
+      <div class="align-left"> <%= gravatar_for current_user %> </div>
 
     <ul class="nav nav-pills nav-stacked">
     <li class="<%= 'active' if params[:controller] == 'welcome' %>"> <a href="/"><p class="sideoption">  <%= fa_icon 'home' %><span style="color:#c4c4c4;"> Home </span></p></a> </li>
