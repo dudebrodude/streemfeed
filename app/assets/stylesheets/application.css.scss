@@ -3,6 +3,7 @@
 @import "welcome";
 @import "colors";
 @import "clubs";
+@import "posts";
 @import "rails_bootstrap_forms";
 @import "font-awesome";
 @import "fullcalendar";
@@ -336,4 +337,7 @@ font-color:#999;
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
+}
+.fc-state-highlight {
+    background: none repeat scroll 0 0 #222;
 }

@@ -2,10 +2,10 @@
 
 one:
   title: MyString
-  clubs_id: 
-  users_id: 
+  club_id: 
+  user_id: 
 
 two:
   title: MyString
-  clubs_id: 
-  users_id: 
+  club_id: 
+  user_id: 
