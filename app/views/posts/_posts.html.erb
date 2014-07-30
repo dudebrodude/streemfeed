@@ -1,18 +1,14 @@
    <div class="col-sm-6">
-
-
 <table>
   <tbody>
     <% @club.posts.each do |post| %>
       <tr class="bg25">
-        <td> <h5 class="ml5"> <strong><%= post.user %></strong> <span style="float:right; margin-right:10px;"><%="#{time_ago_in_words(post.created_at)} ago "%></span></h5></td>
+        <td><%= post.user %></strong> <span style="float:right; margin-right:10px;"><%="#{time_ago_in_words(post.created_at)} ago "%></td>
       </tr>
       <tr class="bg2b">
        <td><%= post.title %></td>
       </tr>
        <% end %>
-
   </tbody>
 </table>
-
 </div>

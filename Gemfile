@@ -32,6 +32,7 @@ gem 'bootstrap_form'
 gem 'font-awesome-rails'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'fullcalendar-rails'
 
 
 group :doc do
