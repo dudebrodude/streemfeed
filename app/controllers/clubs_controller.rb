@@ -12,6 +12,7 @@ class ClubsController < ApplicationController
   # GET /clubs/1
   # GET /clubs/1.json
   def show
+    
  @post = Post.new
  @checkin = Checkin.new
      @hash = Gmaps4rails.build_markers(@club) do |club, marker|

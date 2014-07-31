@@ -9,7 +9,8 @@
   <tbody>
     <% @club.posts.each do |post| %>
       <tr class="post-title">
-        <td><%= post.user %><span style="float:right; margin-right:10px;"><%="#{time_ago_in_words(post.created_at)} ago "%></td>
+
+        <td><%= post.user.name %><span style="float:right; margin-right:10px;"><%="#{time_ago_in_words(post.created_at)} ago "%></td>
       </tr>
       <tr>
        <td class="post-body"><%= post.title %></td>
